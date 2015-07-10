@@ -10,7 +10,20 @@
 
 ## About
 
-Loops are used to execute the same block of code a specified number of times.
+Loops are used to execute the same block of code a specified number of times. You've seen them in Ruby. For instance, think back to the `times` loop:
+
+```ruby
+3.times do
+  puts "Hello world!"
+end
+
+# The above prints:
+# Hello world!
+# Hello world!
+# Hello world!
+```
+
+Instead of a `times` loop, JavaScript offers a `for` loop. Ruby also knows how to execute a block of code `while` a condition is true. JavaScript has an almost identical equivalent: the `while` loop. JavaScript also has a `do-while` loop, which we'll cover at the end of this reading.
 
 ## The For Loop
 
