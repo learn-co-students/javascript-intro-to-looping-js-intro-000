@@ -15,7 +15,9 @@ Loops are used to execute the same block of code a specified number of times.
 ## The For Loop
 
 The `for` loop is made up of four statements and has the following structure:
-      
+
+#### Syntax
+
 ```javascript
 for ( [initialization]; [condition]; [iteration] ) {
   [loopBody]
@@ -36,17 +38,23 @@ for ( [initialization]; [condition]; [iteration] ) {
 
   > Use `for` loop when you know how many times you want the loop to run
 
-  Example:
-  The code belong will print the string "Hello World!" 99 times
+#### Example
+
+The code below will print the string "Hello World!" 99 times
   
 ```javascript
 // i is set to equal to 0
 // as long as i is less than 100 execute the code in the loopBody
 // - which is print "Hello World"; increment i each time code in loopBody is executed
 
-for (var i = 0, i < 100, i++) {
-  console.log( "Hello World! for the " + i + " time" );
+for (var i = 1; i < 4; i++) {
+  console.log( "Hello World the " + i + " time" );
 }
+
+// The above prints:
+// Hello World the 1 time
+// Hello World the 2 time
+// Hello World the 3 time
 ```
 
 You'll encounter `for()` loops again when you learn about iteration through object literals.
@@ -55,6 +63,8 @@ You'll encounter `for()` loops again when you learn about iteration through obje
 
 The `while` loop similar to an if statement, except that its body will keep executing until the condition evaluates to false. Has the following structure:
   
+#### Syntax
+
 ```javascript
 while ([condition]) {
   [loopBody]
@@ -66,34 +76,62 @@ while ([condition]) {
 
   > Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
 
-Example:
+#### Example
 
 ```javascript
 // i is set to Zero
 var i = 0;
 
-// while i is less than Zero
-while ( i < 100) {
-  console.log( "Hello World! for the " + i + " time");
-
-  //  instruction for each pass through loop
+// while i is less than seven
+while ( i < 7) {
   ++i;
+  console.log( "Hello World! for the " + i + " time");
 }
+
+// The above prints:
+// Hello World! for the 1 time
+// Hello World! for the 2 time
+// Hello World! for the 3 time
+// Hello World! for the 4 time
+// Hello World! for the 5 time
+// Hello World! for the 6 time
+// Hello World! for the 7 time
 ```
 
 ## The Do-While Loop
 
 The `do-while` loop is almost exactly the same as the while loop, except for the fact that the loop’s body is executed at least once before the condition is tested. Has the following structure:
-  
+
+#### Syntax
+
 ```javascript
 do {
   [loopBody];
 } while ([condition]);
 ```
   
-You will rarely see `do-while` used since very few situations require a loop that blindly executes at least once.
+You will rarely see `do-while` used since very few situations require a loop that blindly executes at least once. That being said, take a look at the example below:
+
+#### Example
+
+```javascript
+var i = 0;
+
+do {
+   i += 1;
+   console.log(i);
+} while (i < 5);
+
+// The above prints:
+// 1
+// 2
+// 3
+// 4
+// 5
+```
 
 ## Resources
 
-* []()
-* []()
+* [MDN - For Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+* [MDN - While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+* [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
