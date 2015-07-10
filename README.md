@@ -145,6 +145,9 @@ do {
 
 ## Resources
 
+* [Codecademy - For Loop](http://www.codecademy.com/glossary/javascript/loops#for-loops)
 * [MDN - For Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+* [Codecademy - While Loop](http://www.codecademy.com/glossary/javascript/loops#while-loops)
 * [MDN - While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+* [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
