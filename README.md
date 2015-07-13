@@ -6,6 +6,7 @@
 * The For Loop
 * The While Loop
 * The Do-While
+* Conclusion
 * Resources
 
 ## About
@@ -27,7 +28,7 @@ Instead of a `times` loop, JavaScript offers a `for` loop. Ruby also knows how t
 
 ## The For Loop
 
-The `for` loop is made up of four statements and has the following structure:
+In JavaScript, the `for` loop is the most common loop. The `for` loop is made up of four statements and has the following structure:
 
 #### Syntax
 
@@ -142,6 +143,10 @@ do {
 // 4
 // 5
 ```
+
+## Conclusion
+
+If seeing all of these new loops all at once is freaking you out, take a deep breath. Remember, 98% of the time you will want to use a `for` loop. A general heuristic for choosing which loop, is try a `for`. If using `for` doesn't serve your purposes, then go ahead and try a different loop. Also remember that you can always refer to documentation on these loops at any time. After some time coding in JavaScript, writing a `for` loop will come as naturally to you as writing an `each` loop to iterate over an array in Ruby.
 
 ## Resources
 
