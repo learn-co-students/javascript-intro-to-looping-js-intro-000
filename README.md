@@ -156,3 +156,5 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [MDN - While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 * [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+
+<a href='https://learn.co/lessons/intro-to-looping.js' data-visibility='hidden'>View this lesson on Learn.co</a>
