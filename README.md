@@ -87,10 +87,7 @@ while ([condition]) {
 }
 ```
 
-- Condition
-  + An expression evaluated before each pass through the loop (each pass is either an increment or a decrement). If this condition evaluates to true, statement is executed
-
-  > Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
+ Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
 
 #### Example
 
@@ -115,7 +112,7 @@ while ( i < 7) {
 ```
 
 + Create a function `loopingFun`. This function should create an variable `i` that stores the number `10`. Next, the function should declare a variable `num` that does not store a value yet. The while loop should check the condition that the `i` is less than 17. The body of the while loop should have the `num` variable store `i` and then increment `i` by one. The function should return `num`.
-s
+
 ## The Do-While Loop
 
 The `do-while` loop is almost exactly the same as the while loop, except for the fact that the loop's body is executed at least once before the condition is tested. Has the following structure:
