@@ -92,24 +92,15 @@ while ([condition]) {
 #### Example
 
 ```javascript
-// i is set to Zero
-var i = 0;
+var age = 13;
 
-// while i is less than seven
-while ( i < 7) {
-  ++i;
-  console.log( "Hello World! for the " + i + " time");
+while (age < 16 ) {
+  console.log("You can't have my car keys - you're too young!");
+  age ++;
 }
-
-// The above prints:
-// Hello World! for the 1 time
-// Hello World! for the 2 time
-// Hello World! for the 3 time
-// Hello World! for the 4 time
-// Hello World! for the 5 time
-// Hello World! for the 6 time
-// Hello World! for the 7 time
 ```
+
+In this example, the `age` variable could be set to anything, especially if this loop was nested inside a function and the variable was set programatically.This loop will run until the age variable is equal to 16.
 
 + Create a function `loopingFun`. This function should create an variable `i` that stores the number `10`. Next, the function should declare a variable `num` that does not store a value yet. The while loop should check the condition that the `i` is less than 17. The body of the while loop should have the `num` variable store `i` and then increment `i` by one. The function should return `num`.
 
