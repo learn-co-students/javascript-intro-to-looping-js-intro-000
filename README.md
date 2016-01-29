@@ -1,13 +1,11 @@
 # JavaScript Loops
 
-## Overview
-
-* About
-* The For Loop
-* The While Loop
-* The Do-While
-* Conclusion
-* Resources
+##Objectives
++ Build a for loop
++ Build a while loop
++ Build a do-while loop
++ Explain the purpose of a loop
++ Explain the difference between each type of loop in JS
 
 ## About
 
@@ -26,6 +24,8 @@ end
 
 Instead of a `times` loop, JavaScript offers a `for` loop. Ruby also knows how to execute a block of code `while` a condition is true. JavaScript has an almost identical equivalent: the `while` loop. JavaScript also has a `do-while` loop, which we'll cover at the end of this reading.
 
+This is a code-along, so follow along with the instructions in each section. There are tests to make sure you're coding your solutions correctly.
+
 ## The For Loop
 
 In JavaScript, the `for` loop is the most common loop. The `for` loop is made up of four statements and has the following structure:
@@ -41,14 +41,14 @@ for ( [initialization]; [condition]; [iteration] ) {
 - initialization
   An expression (including assignment expressions) or variable declaration. Typically used to initialize a counter variable. This expression may optionally declare new variables with the var keyword
 
-- condition
-  An expression evaluated before each loop iteration. If this expression evaluates to true, statement is executed
+- Condition
+  + An expression evaluated before each loop iteration. If this expression evaluates to true, statement is executed
 
-- iteration
-  A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter and thus bringing the loop ever closer to its end
+- Iteration
+  + A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter and thus bringing the loop ever closer to its end
 
 - loopBody
-  code which runs on every iteration as long as condition evaluates to true
+   + Code which runs on every iteration as long as condition evaluates to true
 
   > Use `for` loop when you know how many times you want the loop to run
 
@@ -73,6 +73,8 @@ for (var i = 1; i < 100; i++) {
 
 You'll encounter `for()` loops again when you learn about iteration through object literals.
 
++ Build a function `loopExcitement`. Inside the function, create a variable `sentences` which stores an empty array. On the next line, you'll need to set up a for loop. Your initialization should set your counter variable equal to 50. Your condition should check to see if your counter variable is less than 75. You should increment your counter variable by one. The body of the loop should add the string `"i am looping"` to the `sentences` array. The string should be in the array 25 times. The function should return the `sentences` array.
+
 ## The While Loop
 
 The `while` loop similar to an if statement, except that its body will keep executing until the condition evaluates to false. Has the following structure:
@@ -85,36 +87,26 @@ while ([condition]) {
 }
 ```
 
-- condition
-  An expression evaluated before each pass through the loop (each pass is either an increment or a decrement). If this condition evaluates to true, statement is executed
-
-  > Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
+ Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
 
 #### Example
 
 ```javascript
-// i is set to Zero
-var i = 0;
+var age = 13;
 
-// while i is less than seven
-while ( i < 7) {
-  ++i;
-  console.log( "Hello World! for the " + i + " time");
+while (age < 16 ) {
+  console.log("You can't have my car keys - you're too young!");
+  age ++;
 }
-
-// The above prints:
-// Hello World! for the 1 time
-// Hello World! for the 2 time
-// Hello World! for the 3 time
-// Hello World! for the 4 time
-// Hello World! for the 5 time
-// Hello World! for the 6 time
-// Hello World! for the 7 time
 ```
+
+In this example, the `age` variable could be set to anything, especially if this loop was nested inside a function and the variable was set programatically.This loop will run until the age variable is equal to 16.
+
++ Create a function `loopingFun`. This function should create an variable `i` that stores the number `10`. Next, the function should declare a variable `num` that does not store a value yet. The while loop should check the condition that the `i` is less than 17. The body of the while loop should have the `num` variable store `i` and then increment `i` by one. The function should return `num`.
 
 ## The Do-While Loop
 
-The `do-while` loop is almost exactly the same as the while loop, except for the fact that the loop’s body is executed at least once before the condition is tested. Has the following structure:
+The `do-while` loop is almost exactly the same as the while loop, except for the fact that the loop's body is executed at least once before the condition is tested. Has the following structure:
 
 #### Syntax
 
@@ -143,6 +135,8 @@ do {
 // 4
 // 5
 ```
+
++ Build a function `alwaysLooping`. This function should accept a number as a parameter. The body of the function should define a variable `love` which stores an empty array. The do-while function should add the string `"JavaScript"` to the `love` array and increment the parameter. The do-while loop should contain the condition that the parameter number is less than 10. The function should return the `love` array.
 
 ## Conclusion
 
