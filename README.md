@@ -87,7 +87,7 @@ while ([condition]) {
 }
 ```
 
- Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
+ Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on a dynamic function/return value
 
 #### Example
 
@@ -152,3 +152,5 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-looping.js' title='JavaScript Loops'>JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-looping.js'>Intro To Looping in JS</a> on Learn.co and start learning to code for free.</p>
