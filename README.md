@@ -71,7 +71,7 @@ for (var i = 1; i < 100; i++) {
 // Hello World the 3 time
 ```
 
-You'll encounter `for()` loops again when you learn about iteration through object literals.
+You'll encounter `for` loops again when you learn about iteration through object literals.
 
 + Build a function `loopExcitement`. Inside the function, create a variable `sentences` which stores an empty array. On the next line, you'll need to set up a for loop. Your initialization should set your counter variable equal to 50. Your condition should check to see if your counter variable is less than 75. You should increment your counter variable by one. The body of the loop should add the string `"i am looping"` to the `sentences` array. The string should be in the array 25 times. The function should return the `sentences` array.
 
@@ -87,7 +87,7 @@ while ([condition]) {
 }
 ```
 
- Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on a dynamic function/return value
+ Use a `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on a dynamic function/return value
 
 #### Example
 
@@ -96,11 +96,11 @@ var age = 13;
 
 while (age < 16 ) {
   console.log("You can't have my car keys - you're too young!");
-  age ++;
+  age++;
 }
 ```
 
-In this example, the `age` variable could be set to anything, especially if this loop was nested inside a function and the variable was set programatically.This loop will run until the age variable is equal to 16.
+In this example, the `age` variable could be set to anything, especially if this loop was nested inside a function and the variable was set programatically. This loop will run until the age variable is equal to 16.
 
 + Create a function `loopingFun`. This function should create an variable `i` that stores the number `10`. Next, the function should declare a variable `num` that does not store a value yet. The while loop should check the condition that the `i` is less than 17. The body of the while loop should have the `num` variable store `i` and then increment `i` by one. The function should return `num`.
 
