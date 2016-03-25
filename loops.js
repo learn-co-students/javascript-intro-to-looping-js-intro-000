@@ -24,3 +24,4 @@ function alwaysLooping(num){
   } while (num < 10);
   return love;
 }
+

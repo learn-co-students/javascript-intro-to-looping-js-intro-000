@@ -71,7 +71,7 @@ for (var i = 1; i < 100; i++) {
 // Hello World the 3 time
 ```
 
-You'll encounter `for()` loops again when you learn about iteration through object literals.
+You'll encounter `for` loops again when you learn about iteration through object literals.
 
 + Build a function `loopExcitement`. Inside the function, create a variable `sentences` which stores an empty array. On the next line, you'll need to set up a for loop. Your initialization should set your counter variable equal to 50. Your condition should check to see if your counter variable is less than 75. You should increment your counter variable by one. The body of the loop should add the string `"i am looping"` to the `sentences` array. The string should be in the array 25 times. The function should return the `sentences` array.
 
@@ -87,35 +87,23 @@ while ([condition]) {
 }
 ```
 
-- Condition
-  + An expression evaluated before each pass through the loop (each pass is either an increment or a decrement). If this condition evaluates to true, statement is executed
-
-  > Use `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on some a dynamic function/return value
+ Use a `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on a dynamic function/return value
 
 #### Example
 
 ```javascript
-// i is set to Zero
-var i = 0;
+var age = 13;
 
-// while i is less than seven
-while ( i < 7) {
-  ++i;
-  console.log( "Hello World! for the " + i + " time");
+while (age < 16 ) {
+  console.log("You can't have my car keys - you're too young!");
+  age++;
 }
-
-// The above prints:
-// Hello World! for the 1 time
-// Hello World! for the 2 time
-// Hello World! for the 3 time
-// Hello World! for the 4 time
-// Hello World! for the 5 time
-// Hello World! for the 6 time
-// Hello World! for the 7 time
 ```
 
+In this example, the `age` variable could be set to anything, especially if this loop was nested inside a function and the variable was set programatically. This loop will run until the age variable is equal to 16.
+
 + Create a function `loopingFun`. This function should create an variable `i` that stores the number `10`. Next, the function should declare a variable `num` that does not store a value yet. The while loop should check the condition that the `i` is less than 17. The body of the while loop should have the `num` variable store `i` and then increment `i` by one. The function should return `num`.
-s
+
 ## The Do-While Loop
 
 The `do-while` loop is almost exactly the same as the while loop, except for the fact that the loop's body is executed at least once before the condition is tested. Has the following structure:
@@ -163,4 +151,6 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
-<a href='https://learn.co/lessons/intro-to-looping.js' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-looping.js' title='JavaScript Loops'>JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-looping.js'>Intro To Looping in JS</a> on Learn.co and start learning to code for free.</p>
