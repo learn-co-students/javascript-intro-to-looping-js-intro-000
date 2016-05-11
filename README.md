@@ -1,34 +1,21 @@
 # JavaScript Loops
 
-##Objectives
-+ Build a for loop
-+ Build a while loop
-+ Build a do-while loop
-+ Explain the purpose of a loop
-+ Explain the difference between each type of loop in JS
+## Objectives
+- Build a for loop
+- Build a while loop
+- Build a do-while loop
+- Explain the purpose of a loop
+- Explain the difference between each type of loop in JS
 
 ## About
 
-Loops are used to execute the same block of code a specified number of times. You've seen them in Ruby. For instance, think back to the `times` loop:
-
-```ruby
-3.times do
-  puts "Hello world!"
-end
-
-# The above prints:
-# Hello world!
-# Hello world!
-# Hello world!
-```
-
-Instead of a `times` loop, JavaScript offers a `for` loop. Ruby also knows how to execute a block of code `while` a condition is true. JavaScript has an almost identical equivalent: the `while` loop. JavaScript also has a `do-while` loop, which we'll cover at the end of this reading.
+Loops are used to execute the same block of code a specified number of times. JavaScript loops come in a few different flavors — namely, `for`, `while`, and `do-while`. We'll cover each of these kinds of loop below.
 
 This is a code-along, so follow along with the instructions in each section. There are tests to make sure you're coding your solutions correctly.
 
-## The For Loop
+## The `for` Loop
 
-In JavaScript, the `for` loop is the most common loop. The `for` loop is made up of four statements and has the following structure:
+Of the loops in JavaScript, the `for` loop is the most common. The `for` loop is made up of four statements and has the following structure:
 
 #### Syntax
 
@@ -39,29 +26,26 @@ for ( [initialization]; [condition]; [iteration] ) {
 ```
 
 - initialization
-  An expression (including assignment expressions) or variable declaration. Typically used to initialize a counter variable. This expression may optionally declare new variables with the var keyword
-
+  - An expression (including assignment expressions) or variable declaration. Typically used to initialize a counter variable. This expression may optionally declare new variables with the var keyword
 - Condition
-  + An expression evaluated before each loop iteration. If this expression evaluates to true, statement is executed
-
+  - An expression evaluated before each loop iteration. If this expression evaluates to true, statement is executed
 - Iteration
-  + A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter and thus bringing the loop ever closer to its end
-
+  - A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter and thus bringing the loop ever closer to its end
 - loopBody
-   + Code which runs on every iteration as long as condition evaluates to true
+  - Code which runs on every iteration as long as condition evaluates to true
 
-  > Use `for` loop when you know how many times you want the loop to run
+> Use `for` loop when you know how many times you want the loop to run (for example, when you have an array of known size)
 
 #### Example
 
 The code below will print the string "Hello World!" 99 times
-  
+
 ```javascript
 // i is set to equal to 1
 // as long as i is less than 100 execute the code in the loopBody
 // - which is print "Hello World"; increment i each time code in loopBody is executed
 
-for (var i = 1; i < 100; i++) {
+for (let i = 1; i < 100; i++) {
   console.log( "Hello World the " + i + " time" );
 }
 
@@ -73,12 +57,20 @@ for (var i = 1; i < 100; i++) {
 
 You'll encounter `for` loops again when you learn about iteration through object literals.
 
-+ Build a function `loopExcitement`. Inside the function, create a variable `sentences` which stores an empty array. On the next line, you'll need to set up a for loop. Your initialization should set your counter variable equal to 50. Your condition should check to see if your counter variable is less than 75. You should increment your counter variable by one. The body of the loop should add the string `"i am looping"` to the `sentences` array. The string should be in the array 25 times. The function should return the `sentences` array.
+**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If you're `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
 
-## The While Loop
+**HINT**: Your `for` loop could look something like this:
+
+``` javascript
+for (let i = 0; i < 25; i++) {
+  // ...
+}
+```
+
+## The `while` Loop
 
 The `while` loop similar to an if statement, except that its body will keep executing until the condition evaluates to false. Has the following structure:
-  
+
 #### Syntax
 
 ```javascript
@@ -87,22 +79,35 @@ while ([condition]) {
 }
 ```
 
- Use a `while` loop when you don't know how many times your loop needs to run - that is your condition is dependent on a dynamic function/return value
+ A `while` loop is best used when we don't know how many times your loop needs to run - that is, your condition is dependent on a dynamic function/return value
 
 #### Example
 
 ```javascript
-var age = 13;
+function maybeTrue() {
+  return Math.random() >= 0.5
+}
 
-while (age < 16 ) {
-  console.log("You can't have my car keys - you're too young!");
-  age++;
+// run until `maybeTrue()` returns `false`
+// (so the body of the loop might _never_ run!)
+while (maybeTrue()) {
+  console.log("And I ran, I ran so far away!");
 }
 ```
 
-In this example, the `age` variable could be set to anything, especially if this loop was nested inside a function and the variable was set programatically. This loop will run until the age variable is equal to 16.
+In this example, `maybeTrue()` returns `true` 50% of the time, and our loop runs until `maybeTrue()` returns `false`. We've used a `while` loop because we don't have any specific number to count up or down to in our loop — we just want it to run until the condition is no longer met.
 
-+ Create a function `loopingFun`. This function should create an variable `i` that stores the number `10`. Next, the function should declare a variable `num` that does not store a value yet. The while loop should check the condition that the `i` is less than 17. The body of the while loop should have the `num` variable store `i` and then increment `i` by one. The function should return `num`.
+But we can also use a `while` loop in place of a `for` loop — we just have to remember to change the condition on each pass so that the loop terminates (otherwise it will run forever).
+
+``` javascript
+let countdown = 100;
+
+while (countdown > 0) {
+  console.log(--countdown)
+}
+```
+
+**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down from the passed in number to 0. Then return the string `'done'`.
 
 ## The Do-While Loop
 
@@ -115,28 +120,24 @@ do {
   [loopBody];
 } while ([condition]);
 ```
-  
+
 You will rarely see `do-while` used since very few situations require a loop that blindly executes at least once. That being said, take a look at the example below:
 
 #### Example
 
 ```javascript
-var i = 0;
+function maybeTrue() {
+  return Math.random() >= 0.5
+}
 
 do {
-   i += 1;
-   console.log(i);
-} while (i < 5);
-
-// The above prints:
-// 1
-// 2
-// 3
-// 4
-// 5
+  console.log('doo-bee-doo-bee-doo')
+} while (maybeTrue());
 ```
 
-+ Build a function `alwaysLooping`. This function should accept a number as a parameter. The body of the function should define a variable `love` which stores an empty array. The do-while function should add the string `"JavaScript"` to the `love` array and increment the parameter. The do-while loop should contain the condition that the parameter number is less than 10. The function should return the `love` array.
+Remember how we couldn't be sure with the plain `while` loop above that the body would run using `maybeTrue()`? With `do`, we _can_ be sure that the body will run!
+
+**TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take an array as an argument. Use the `maybeTrue()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `maybeTrue()` returns `false`. (Your condition might look something like `array.length > 0 && maybeTrue()`.) Finally, return the array.
 
 ## Conclusion
 
@@ -151,6 +152,4 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-looping.js' title='JavaScript Loops'>JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-looping.js'>Intro To Looping in JS</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility="hidden">View <a href="https://learn.co/lessons/intro-to-looping.js" title="JavaScript Loops">JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
