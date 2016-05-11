@@ -1,5 +1,0 @@
-javascripts:
-  files:
-    - loops.js
-  specs:
-    - spec/loops_spec.js

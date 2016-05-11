@@ -1,27 +1,32 @@
-function loopExcitement(){
-  var sentences = []
-  for (var i = 50; i < 75; i++){
-    sentences.push("i am looping");
+function forLoop(array) {
+  for (let i = 0; i < 25; i++) {
+    if (i === 1) {
+      array.push("I am 1 strange loop.")
+    } else {
+      array.push(`I am ${i} strange loops.`)
+    }
   }
-  return sentences;
+
+  return array
 }
 
-function loopingFun(){
-  var i = 10;
-  var num;
-  while(i < 17){
-    num = i;
-    i++;
+
+function whileLoop(n) {
+  while (n > 0) {
+    console.log(--n)
   }
-  return num;
+
+  return 'done'
 }
 
-function alwaysLooping(num){
-  var love = []
+function doWhileLoop(array) {
+  function maybeTrue() {
+    return Math.random() >= 0.5
+  }
+
   do {
-    love.push("JavaScript")
-    num ++;
-  } while (num < 10);
-  return love;
-}
+    array = array.slice(1)
+  } while (array.length > 0 && maybeTrue())
 
+  return array
+}
