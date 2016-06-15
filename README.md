@@ -7,15 +7,37 @@
 - Explain the purpose of a loop
 - Explain the difference between each type of loop in JS
 
+## Introduction
+
+Sometimes, we need to do things repeatedly. Let's say we have a bunch of gifts to wrap. They all happen to be the same size and shape, so for every gift, we need to cut a similarly sized piece of wrapping paper, fold it up over the edges of the gift, tape it together, and add a nice little card. Then we set the wrapped gift aside and moved onto the next gift.
+
+In programming terms, we can think of the gifts as an array and the act of wrapping them as a function. We could, of course, write the following code:
+
+``` javascript
+var gifts = ['teddy bear', 'drone', 'doll']
+
+function wrapGift(gift) {
+  console.log(`Wrapped ${gift} and added a bow!`)
+}
+```
+
+We could then call `wrapGift()` on each gift individually:
+
+``` javascript
+wrapGift(gifts[0])
+wrapGift(gifts[1])
+wrapGift(gifts[2])
+```
+
+But if we had more gifts, we'd have to write out more calles to `wrapGift()` — it'd probably get tiring after a while.
+
+This is where loops come in handy! With a loop, we can just write the repeated action _once_ and perform the action on every item in the collection.
+
 ## About
 
 Loops are used to execute the same block of code a specified number of times. JavaScript loops come in a few different flavors — namely, `for`, `while`, and `do-while`. We'll cover each of these kinds of loop below.
 
 This is a code-along, so follow along with the instructions in each section. There are tests to make sure you're coding your solutions correctly.
-
-## Prefatory Note
-
-In order to get the tests to pass, you'll need to have Node.js of at least version 6.0.0 on your system. If you don't know what that means, head to [Installing Node](#installing-node) below.
 
 ## The `for` Loop
 
@@ -49,7 +71,7 @@ The code below will print the string "Hello World!" 99 times
 // as long as i is less than 100 execute the code in the loopBody
 // - which is print "Hello World"; increment i each time code in loopBody is executed
 
-for (let i = 1; i < 100; i++) {
+for (var i = 1; i < 100; i++) {
   console.log( "Hello World the " + i + " time" );
 }
 
@@ -155,17 +177,5 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [MDN - While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 * [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
-
-## Installing Node
-
-Node.js is JavaScript runtime that operates on the server. It's not important to know exactly what that means, but it's important to know why we're requiring it here. Even though we're learning about browser-based JavaScript, almost all of what we write can run _as written_ on the server. That means that Node.js gives us a way of, e.g., running tests without having to hack together some browser-based testing environment (which would be slow and error prone). Instead, we just pass our code to the Node.js runtime and our tests chug along (and print out handy errors to boot!).
-
-If you're on OS X, you can install Node using Homebrew (`brew install node`).
-
-If you're using Linux, use your package manager (`sudo apt-get node` or something like that.)
-
-On Windows, you can install from source or use something like [Chocolatey](https://chocolatey.org/).
-
-Then, once you have a base Node.js installed, you can use a version manager like [n](https://github.com/tj/n) or [nvm](https://github.com/creationix/nvm) (for [Windows](https://github.com/coreybutler/nvm-windows)) so that you can easily switch between multiple versions. (For this course, and most things you'll encounter afterwards, version 6 or higher will be all you'll need.)
 
 <p data-visibility="hidden">View <a href="https://learn.co/lessons/intro-to-looping.js" title="JavaScript Loops">JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
