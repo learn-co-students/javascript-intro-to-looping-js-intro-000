@@ -133,7 +133,7 @@ while (countdown > 0) {
 }
 ```
 
-**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down from the passed in number to 0. Then return the string `'done'`.
+**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down (using `console.log`) from the passed in number to 0. Then return the string `'done'`.
 
 ## The Do-While Loop
 
