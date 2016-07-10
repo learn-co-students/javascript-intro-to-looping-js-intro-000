@@ -29,7 +29,7 @@ wrapGift(gifts[1])
 wrapGift(gifts[2])
 ```
 
-But if we had more gifts, we'd have to write out more calles to `wrapGift()` — it'd probably get tiring after a while.
+But if we had more gifts, we'd have to write out more calls to `wrapGift()` — it'd probably get tiring after a while.
 
 This is where loops come in handy! With a loop, we can just write the repeated action _once_ and perform the action on every item in the collection.
 
@@ -133,7 +133,7 @@ while (countdown > 0) {
 }
 ```
 
-**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down from the passed in number to 0. Then return the string `'done'`.
+**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down (using `console.log`) from the passed in number to 0. Then return the string `'done'`.
 
 ## The Do-While Loop
 
