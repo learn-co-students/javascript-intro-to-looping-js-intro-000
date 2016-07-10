@@ -29,7 +29,7 @@ wrapGift(gifts[1])
 wrapGift(gifts[2])
 ```
 
-But if we had more gifts, we'd have to write out more calles to `wrapGift()` — it'd probably get tiring after a while.
+But if we had more gifts, we'd have to write out more calls to `wrapGift()` — it'd probably get tiring after a while.
 
 This is where loops come in handy! With a loop, we can just write the repeated action _once_ and perform the action on every item in the collection.
 
