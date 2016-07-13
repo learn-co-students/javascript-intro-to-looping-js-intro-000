@@ -167,7 +167,7 @@ Remember how we couldn't be sure with the plain `while` loop above that the body
 
 ## Conclusion
 
-If seeing all of these new loops all at once is freaking you out, take a deep breath. Remember, 98% of the time you will want to use a `for` loop. A general heuristic for choosing which loop, is try a `for`. If using `for` doesn't serve your purposes, then go ahead and try a different loop. Also remember that you can always refer to documentation on these loops at any time. After some time coding in JavaScript, writing a `for` loop will come as naturally to you as writing an `each` loop to iterate over an array in Ruby.
+If seeing all of these new loops all at once is freaking you out, take a deep breath. Remember, 98% of the time you will want to use a `for` loop. A general heuristic for choosing which loop, is try a `for`. If using `for` doesn't serve your purposes, then go ahead and try a different loop. Also remember that you can always refer to documentation on these loops at any time. After some time coding in JavaScript, writing a `for` loop will come as naturally to you as wrapping one gift after another.
 
 ## Resources
 
@@ -177,7 +177,5 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [MDN - While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 * [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
-
-<p data-visibility="hidden">View <a href="https://learn.co/lessons/intro-to-looping.js" title="JavaScript Loops">JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/javascript-intro-to-looping'>Javascript Intro To Looping</a> on Learn.co and start learning to code for free.</p>
