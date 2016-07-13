@@ -83,7 +83,7 @@ for (var i = 1; i < 100; i++) {
 
 You'll encounter `for` loops again when you learn about iterating through object literals.
 
-**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If you're `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
+**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If your `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
 
 **HINT**: Your `for` loop could look something like this:
 
@@ -179,3 +179,5 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
 <p data-visibility="hidden">View <a href="https://learn.co/lessons/intro-to-looping.js" title="JavaScript Loops">JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-intro-to-looping'>Javascript Intro To Looping</a> on Learn.co and start learning to code for free.</p>
