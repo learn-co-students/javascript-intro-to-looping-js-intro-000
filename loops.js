@@ -6,7 +6,9 @@ function forLoop(array) {
     else {
       array.push(`"I am ${i} strange loops."`)
     } */
-    array.push(`"I am ${i} strange loop${i === 0 ? '' : 's'}."``)
+    var push_string = `"I am ${i} strange loop${i === 0 ? '' : 's'}."`;
+    array[i] = push_string;
+/*    array.push(push_string); */
   }
   return array
 }
