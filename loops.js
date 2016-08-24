@@ -25,11 +25,11 @@ function doWhileLoop(array) {
   }
 
 
-do {
-  array = array.slice(1)
-}
-while (array.length > 0 && mayBeTrue())
+  do {
+    array = array.slice(1)
+  }
+  while (array.length > 0 && mayBeTrue())
 
-return array
+  return array
 
 }
