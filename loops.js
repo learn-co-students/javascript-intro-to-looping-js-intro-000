@@ -2,8 +2,7 @@
 to an array 25 times: TypeError: Cannot read property 'length' of undefined -->
 */
 function forLoop(array) {
-      var i = 0
-  for (i < 25; i++) {
+  for (let i = 0; i < 25; i++) {
     if (i === 1) {
       array.push("I am 1 strange loop");
     }
