@@ -7,6 +7,32 @@
 - Explain the purpose of a loop
 - Explain the difference between each type of loop in JS
 
+## Introduction
+
+Sometimes, we need to do things repeatedly. Let's say we have a bunch of gifts to wrap. They all happen to be the same size and shape, so for every gift, we need to cut a similarly sized piece of wrapping paper, fold it up over the edges of the gift, tape it together, and add a nice little card. Then we set the wrapped gift aside and moved onto the next gift.
+
+In programming terms, we can think of the gifts as an array and the act of wrapping them as a function. We could, of course, write the following code:
+
+``` javascript
+var gifts = ['teddy bear', 'drone', 'doll']
+
+function wrapGift(gift) {
+  console.log(`Wrapped ${gift} and added a bow!`)
+}
+```
+
+We could then call `wrapGift()` on each gift individually:
+
+``` javascript
+wrapGift(gifts[0])
+wrapGift(gifts[1])
+wrapGift(gifts[2])
+```
+
+But if we had more gifts, we'd have to write out more calls to `wrapGift()` — it'd probably get tiring after a while.
+
+This is where loops come in handy! With a loop, we can just write the repeated action _once_ and perform the action on every item in the collection.
+
 ## About
 
 Loops are used to execute the same block of code a specified number of times. JavaScript loops come in a few different flavors — namely, `for`, `while`, and `do-while`. We'll cover each of these kinds of loop below.
@@ -20,7 +46,7 @@ Of the loops in JavaScript, the `for` loop is the most common. The `for` loop is
 #### Syntax
 
 ```javascript
-for ( [initialization]; [condition]; [iteration] ) {
+for ([initialization]; [condition]; [iteration]) {
   [loopBody]
 }
 ```
@@ -45,7 +71,7 @@ The code below will print the string "Hello World!" 99 times
 // as long as i is less than 100 execute the code in the loopBody
 // - which is print "Hello World"; increment i each time code in loopBody is executed
 
-for (let i = 1; i < 100; i++) {
+for (var i = 1; i < 100; i++) {
   console.log( "Hello World the " + i + " time" );
 }
 
@@ -55,9 +81,9 @@ for (let i = 1; i < 100; i++) {
 // Hello World the 3 time
 ```
 
-You'll encounter `for` loops again when you learn about iteration through object literals.
+You'll encounter `for` loops again when you learn about iterating through object literals.
 
-**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If you're `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
+**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If your `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
 
 **HINT**: Your `for` loop could look something like this:
 
@@ -107,7 +133,7 @@ while (countdown > 0) {
 }
 ```
 
-**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down from the passed in number to 0. Then return the string `'done'`.
+**TODO**: Create a function called `whileLoop` in `loops.js`. The function should take a number as an argument. Using a `while` loop, count down (using `console.log`) from the passed in number to 0. Then return the string `'done'`.
 
 ## The Do-While Loop
 
@@ -137,11 +163,11 @@ do {
 
 Remember how we couldn't be sure with the plain `while` loop above that the body would run using `maybeTrue()`? With `do`, we _can_ be sure that the body will run!
 
-**TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take an array as an argument. Use the `maybeTrue()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `maybeTrue()` returns `false`. (Your condition might look something like `array.length > 0 && maybeTrue()`.) Finally, return the array.
+**TODO**: Define a function called `doWhile` in `loops.js`. The function should take an array as an argument. Use the `maybeTrue()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `maybeTrue()` returns `false`. (Your condition might look something like `array.length > 0 && maybeTrue()`.) Finally, return the array.
 
 ## Conclusion
 
-If seeing all of these new loops all at once is freaking you out, take a deep breath. Remember, 98% of the time you will want to use a `for` loop. A general heuristic for choosing which loop, is try a `for`. If using `for` doesn't serve your purposes, then go ahead and try a different loop. Also remember that you can always refer to documentation on these loops at any time. After some time coding in JavaScript, writing a `for` loop will come as naturally to you as writing an `each` loop to iterate over an array in Ruby.
+If seeing all of these new loops all at once is freaking you out, take a deep breath. Remember, 98% of the time you will want to use a `for` loop. A general heuristic for choosing which loop, is try a `for`. If using `for` doesn't serve your purposes, then go ahead and try a different loop. Also remember that you can always refer to documentation on these loops at any time. After some time coding in JavaScript, writing a `for` loop will come as naturally to you as wrapping one gift after another.
 
 ## Resources
 
@@ -152,4 +178,4 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [Codecademy - Do-While Loop](http://www.codecademy.com/glossary/javascript/loops#do-while-loops)
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
-<p data-visibility="hidden">View <a href="https://learn.co/lessons/intro-to-looping.js" title="JavaScript Loops">JavaScript Loops</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/javascript-intro-to-looping'>Javascript Intro To Looping</a> on Learn.co and start learning to code for free.</p>
