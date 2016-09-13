@@ -20,13 +20,13 @@ function whileLoop (number){
 
 
 
-// function doWhile(array){
-//   function maybeTrue() {
-//     return Math.random() >= 0.5
-//   }
-//   do {
-//     array.length - 1;
-//   } while {
-//     array.length > 0 && maybeTrue();
-//   }
-// }
+function doWhile(array){
+  function maybeTrue() {
+    return Math.random() >= 0.5
+  }
+  do {
+    array = array.slice(1);
+  } while {
+    array.length > 0 && maybeTrue();
+  }
+}
