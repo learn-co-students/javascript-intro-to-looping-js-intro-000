@@ -7,7 +7,7 @@ function forLoop(array){
     }
   }
   return array
-}
+};
 
 function whileLoop (number){
   var counter = number;
@@ -16,7 +16,7 @@ function whileLoop (number){
     console.log(counter);
   }
   return "done";
-}
+};
 
 
 
@@ -24,9 +24,11 @@ function doWhile(array){
   function maybeTrue() {
     return Math.random() >= 0.5
   }
+
   do {
     array = array.slice(1);
   } while {
     array.length > 0 && maybeTrue();
   }
+  return array;
 }
