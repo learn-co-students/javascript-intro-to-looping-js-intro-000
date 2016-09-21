@@ -56,20 +56,20 @@ for ([initialization]; [condition]; [iteration]) {
 - Condition
   - An expression evaluated before each loop iteration. If this expression evaluates to true, statement is executed
 - Iteration
-  - A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter and thus bringing the loop ever closer to its end
+  - A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter, bringing the loop ever closer to its end
 - loopBody
-  - Code which runs on every iteration as long as condition evaluates to true
+  - Code which runs on every iteration as long as the condition evaluates to true
 
-> Use `for` loop when you know how many times you want the loop to run (for example, when you have an array of known size)
+> Use a `for` loop when you know how many times you want the loop to run (for example, when you have an array of known size).
 
 #### Example
 
 The code below will print the string "Hello World!" 99 times
 
 ```javascript
-// i is set to equal to 1
+// i is set equal to 1
 // as long as i is less than 100 execute the code in the loopBody
-// - which is print "Hello World"; increment i each time code in loopBody is executed
+// - which is print "Hello World"; increment i each time the code in loopBody is executed
 
 for (var i = 1; i < 100; i++) {
   console.log( "Hello World the " + i + " time" );
@@ -95,7 +95,7 @@ for (let i = 0; i < 25; i++) {
 
 ## The `while` Loop
 
-The `while` loop similar to an if statement, except that its body will keep executing until the condition evaluates to false. Has the following structure:
+The `while` loop is similar to an `if` statement, except that its body will keep executing until the condition evaluates to false. It has the following structure:
 
 #### Syntax
 
@@ -105,7 +105,7 @@ while ([condition]) {
 }
 ```
 
- A `while` loop is best used when we don't know how many times your loop needs to run - that is, your condition is dependent on a dynamic function/return value
+> A `while` loop is best used when we don't know how many times a loop needs to run - that is, the condition is dependent on a dynamic function/return value.
 
 #### Example
 
@@ -117,7 +117,7 @@ function maybeTrue() {
 // run until `maybeTrue()` returns `false`
 // (so the body of the loop might _never_ run!)
 while (maybeTrue()) {
-  console.log("And I ran, I ran so far away!");
+  console.log("And I ran; I ran so far away!");
 }
 ```
 
