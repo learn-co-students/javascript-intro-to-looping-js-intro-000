@@ -17,12 +17,14 @@ function whileLoop(n){
 }
 
 
-function doWhileLoop(array){
+function doWhileLoop(array) {
   function maybeTrue() {
     return Math.random() >= 0.5
   }
 
-do{array.pop()}
-while(maybeTrue() && array.length > 0)
+  do {
+    array = array.slice(1)
+  } while (array.length > 0 && maybeTrue())
 
+  return array
 }
