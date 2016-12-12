@@ -179,3 +179,5 @@ If seeing all of these new loops all at once is freaking you out, take a deep br
 * [MDN - Do-While Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/javascript-intro-to-looping'>Javascript Intro To Looping</a> on Learn.co and start learning to code for free.</p>
+
+this is from GJ's suggestion
