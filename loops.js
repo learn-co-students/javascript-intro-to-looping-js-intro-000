@@ -1,28 +1,26 @@
-function forLoop(array) {
-  for(var i = 0; i < 25; i++) {
-    array.push("I am" + i + "strange loop.")
+'use strict';
+
+function forLoop(arr) {
+  for(i = 0; i < 25; i++) {
+    arr.push(`I am ${i} strange loops.`);
   }
-  return array;
+  return arr
 }
 
 function whileLoop(n) {
-  while(n > 0) {
-    console.log(--n);
+  while (n > 0) {
+    console.log(n);
+    n -= 1;
   }
-  return "done";
+  return 'done';
+}
+
+function doWhileLoop(arr) {
+  do {
+    arr.pop();
+  } while (!arr.length || maybeTrue())
 }
 
 function maybeTrue() {
   return Math.random() >= 0.5
-}
-
-do {
-  console.log('doo-bee-doo-bee-doo')
-} while (maybeTrue());
-
-function doWhileLoop(array) {
-  do {
-      array.pop();
-  } while(array.length > 0 && maybeTrue());
-  return array;
 }
