@@ -10,7 +10,7 @@
     "node": "6.x"
   },
   "scripts": {
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
+    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json --timeout 10000"
   },
   "repository": {
     "type": "git",
