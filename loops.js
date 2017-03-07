@@ -28,16 +28,15 @@ whileLoop(15);
 
 var array = [1,9,2,8,3,6,4,1,5];
 
-  function maybeTrue() {
-  return Math.random() >= 0.5
+function maybeTrue() {
+  return Math.random() > 0.5
 }
 
 function doWhileLoop(array) {
 do {
   array.pop()
-} while (array.length > 0  && maybeTrue());
+} while (array.length > 0  && maybeTrue() === false);
 
 return array;
 }
 doWhileLoop(array);
-console.log(array);
