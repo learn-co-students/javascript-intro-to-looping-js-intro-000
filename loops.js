@@ -4,7 +4,6 @@ function forLoop(array){
   }
   return array;
 }
-forLoop([]);
 
 function whileLoop(number){
   while(number > 0){
@@ -12,7 +11,6 @@ function whileLoop(number){
   }
   return 'done';
 }
-whileLoop(5);
 
 function doWhileLoop(array){
   function maybeTrue (){
@@ -20,9 +18,8 @@ function doWhileLoop(array){
   }
 
   do{
-    array.splice(array.length - 1, 1);
+    array = array.slice(1);
   } while (array.length > 0 || maybeTrue());
   
   return array;
 }
-doWhileLoop([1, 2, 3, 4, 5]);
