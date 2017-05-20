@@ -7,7 +7,7 @@ const path = require('path')
 const spies = require('chai-spies')
 
 chai.use(spies)
-
+ 
 const expect = chai.expect
 
 function makeArray() {
