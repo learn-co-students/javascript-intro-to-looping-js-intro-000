@@ -22,4 +22,4 @@ function doWhileLoop(array) {
     return array;
   } while(array.length > 0);
 }
-//Didn't iclude the maybeTrue function because I don't understand the logic of using it :)
+//Didn't include the maybeTrue function because I don't understand the logic of using it :)
