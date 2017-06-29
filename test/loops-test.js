@@ -12,7 +12,7 @@ const expect = chai.expect
 
 function makeArray() {
   const array = []
-  const t = Math.floor(Math.random() * 10)
+  const t = 3 //Math.floor(Math.random() * 10)
 
   for (let i = 0; i < t; i++) {
     array.push("I am a strange loop.")
@@ -45,7 +45,7 @@ describe('loops', () => {
   describe('whileLoop(n)', () => {
     it('counts down from n to 0', () => {
       const spy = chai.spy.on(console, 'log')
-      const n = Math.floor(Math.random() * 100)
+      const n = 3 //Math.floor(Math.random() * 100)
 
       expect(whileLoop(n)).to.equal('done')
       expect(spy).to.have.been.called.exactly(n)
