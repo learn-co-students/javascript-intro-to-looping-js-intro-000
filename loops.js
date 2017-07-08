@@ -2,11 +2,10 @@
   var array = [];
 
 function forLoop(array) {
-
   for (var i = 0; i < 25; i++) {
  i === 1 ?  array.push(`I am ${i} strange loop.`) :  array.push(`I am ${i} strange loops.`);
   }
-return array
+  return array
 }
 
 function whileLoop(n) {
@@ -17,6 +16,18 @@ function whileLoop(n) {
 }
 
 function doWhileLoop(array) {
+
+  do {
+  function maybeTrue() {
+    array.pop();
+    return array
+    }
+  }while(array.length > 0 && maybeTrue());
+
+  return array
+}
+//the code below is different way to solve the question
+/*function doWhileLoop(array) {
   function maybeTrue() {
    array.pop();
     if (array.length > 0) {
@@ -29,4 +40,4 @@ function doWhileLoop(array) {
     console.log(array);
   } while(array.length > 0 && maybeTrue());
   return array
-}
+}*/
