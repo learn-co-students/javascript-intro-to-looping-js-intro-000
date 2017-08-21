@@ -158,7 +158,7 @@ function maybeTrue() {
 
 do {
   console.log('doo-bee-doo-bee-doo')
-} while (maybeTrue());
+} while (maybeTrue(arr.length > 0 && maybeTrue()));
 ```
 
 Remember how we couldn't be sure with the plain `while` loop above that the body would run using `maybeTrue()`? With `do`, we _can_ be sure that the body will run!
