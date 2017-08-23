@@ -9,9 +9,7 @@
   "engines": {
     "node": "6.x"
   },
-  "scripts": {
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
-  },
+  "scripts": { "test": "mocha --timeout 5000 -R mocha-multi --reporter-options nyan=-,json=.results.json" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/learn-co-curriculum/javascript-intro-to-looping.git"
