@@ -83,7 +83,7 @@ for (var i = 1; i < 100; i++) {
 
 You'll encounter `for` loops again when you learn about iterating through object literals.
 
-**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If your `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
+**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array 25 times. But not just any string. If your `i` value is `1`, add the string `"I am 1 strange loop."`; if your `i` value is anything else, add the string `"I am ${i} strange loops."`. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
 
 **HINT**: Your `for` loop could look something like this:
 
