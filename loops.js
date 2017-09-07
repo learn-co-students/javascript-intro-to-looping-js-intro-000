@@ -1,4 +1,4 @@
-var array = ["Hi"]
+var array = new Array();
 
 function forLoop(array) {
   for (var i = 0; i < 25; i++) {
@@ -22,7 +22,7 @@ function maybeTrue() {
   return Math.random() >= 0.5
 }
 
-var array = new Array();
+
 
 function doWhileLoop(array) {
   do { array.pop();
