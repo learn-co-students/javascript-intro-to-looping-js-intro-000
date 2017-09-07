@@ -12,7 +12,7 @@ function whileLoop(n) {
     n--
     console.log(n)
     if ( n === 0) {
-    return('done')
+    return 'done'
     }
   }
   return n
