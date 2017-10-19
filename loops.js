@@ -11,7 +11,7 @@ function forLoop(array){
 
 function whileLoop(num){
   while (num > 0) {
-    num -= 1
+    num -= 1  // subtract one from number
     console.log(num)
   }
     return 'done'
