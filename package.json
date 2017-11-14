@@ -6,9 +6,6 @@
   "directories": {
     "test": "test"
   },
-  "engines": {
-    "node": "6.x"
-  },
   "scripts": {
     "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
   },
