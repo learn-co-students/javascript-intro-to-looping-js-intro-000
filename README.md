@@ -56,20 +56,20 @@ for ([initialization]; [condition]; [iteration]) {
 - Condition
   - An expression evaluated before each loop iteration. If this expression evaluates to true, statement is executed
 - Iteration
-  - A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter and thus bringing the loop ever closer to its end
+  - A statement executed at the end of each iteration. Typically, this will involve incrementing or decrementing a counter, bringing the loop ever closer to its end
 - loopBody
-  - Code which runs on every iteration as long as condition evaluates to true
+  - Code which runs on every iteration as long as the condition evaluates to true
 
-> Use `for` loop when you know how many times you want the loop to run (for example, when you have an array of known size)
+> Use a `for` loop when you know how many times you want the loop to run (for example, when you have an array of known size).
 
 #### Example
 
 The code below will print the string "Hello World!" 99 times
 
 ```javascript
-// i is set to equal to 1
+// i is set equal to 1
 // as long as i is less than 100 execute the code in the loopBody
-// - which is print "Hello World"; increment i each time code in loopBody is executed
+// - which is print "Hello World"; increment i each time the code in loopBody is executed
 
 for (var i = 1; i < 100; i++) {
   console.log( "Hello World the " + i + " time" );
@@ -83,7 +83,7 @@ for (var i = 1; i < 100; i++) {
 
 You'll encounter `for` loops again when you learn about iterating through object literals.
 
-**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array. But not just any string. If your `i` value is `1`, add the string `"I am 1 strange loop."`; but if your `i` value is anything else, add the string `"I am ${i} strange loops."` to the array 25 times. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
+**TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and, using a `for` loop, add a string to the array 25 times. But not just any string. If your `i` value is `1`, add the string `"I am 1 strange loop."`; if your `i` value is anything else, add the string `"I am ${i} strange loops."`. (Remember flow control with `if` and `else`? And how do we _interpolate_ `i`?) Then return the array.
 
 **HINT**: Your `for` loop could look something like this:
 
@@ -95,7 +95,7 @@ for (let i = 0; i < 25; i++) {
 
 ## The `while` Loop
 
-The `while` loop similar to an if statement, except that its body will keep executing until the condition evaluates to false. Has the following structure:
+The `while` loop is similar to an `if` statement, except that its body will keep executing until the condition evaluates to false. It has the following structure:
 
 #### Syntax
 
@@ -105,19 +105,19 @@ while ([condition]) {
 }
 ```
 
- A `while` loop is best used when we don't know how many times your loop needs to run - that is, your condition is dependent on a dynamic function/return value
+> A `while` loop is best used when we don't know how many times a loop needs to run - that is, the condition is dependent on a dynamic function/return value.
 
 #### Example
 
 ```javascript
 function maybeTrue() {
-  return Math.random() >= 0.5
+  return Math.random() >= 0.5 // Returns a random number between 0 (inclusive) and 1 (exclusive)
 }
 
 // run until `maybeTrue()` returns `false`
 // (so the body of the loop might _never_ run!)
 while (maybeTrue()) {
-  console.log("And I ran, I ran so far away!");
+  console.log("And I ran; I ran so far away!");
 }
 ```
 
@@ -163,7 +163,7 @@ do {
 
 Remember how we couldn't be sure with the plain `while` loop above that the body would run using `maybeTrue()`? With `do`, we _can_ be sure that the body will run!
 
-**TODO**: Define a function called `doWhile` in `loops.js`. The function should take an array as an argument. Use the `maybeTrue()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `maybeTrue()` returns `false`. (Your condition might look something like `array.length > 0 && maybeTrue()`.) Finally, return the array.
+**TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take an array as an argument. Use the `maybeTrue()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `maybeTrue()` returns `false`. (Your condition might look something like `array.length > 0 && maybeTrue()`.) Finally, return the array.
 
 ## Conclusion
 
