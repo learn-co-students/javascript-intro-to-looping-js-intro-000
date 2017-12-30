@@ -28,5 +28,5 @@ return "done"
        array.pop();
        return "false"
     } while (array.length > 0 && maybeTrue());
-
+return array
   }
