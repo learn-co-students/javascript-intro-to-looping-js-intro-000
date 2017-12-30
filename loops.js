@@ -23,10 +23,11 @@ return "done"
   function doWhileLoop(array) {
   function maybeTrue() {
     Math.random() >= 0.5;
+    return "false"
   }
     do {
        array.pop();
-       return "false"
     } while (array.length > 0 && maybeTrue());
 return array
+
   }
