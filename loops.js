@@ -1,12 +1,8 @@
 function forLoop(array) {
   for (let i = 0; i < 25; i++) {
-    if (array.length === 0) {
-      array.push(`I am 1 strange loop.`)
-    } else {
-      array.push(`I am ${i} strange loop.`)
-    }
+    array.push(`I am ${i} strange loops.`)
   }
-  return ar
+  return array
 }
 
 function whileLoop(n) {
@@ -15,12 +11,16 @@ function whileLoop(n) {
     console.log(i)
     i--
   }
+
+  return 'done'
+}
+
+function maybeTrue() {
+  return Math.random() >= 0.5
 }
 
 function doWhileLoop(array) {
   do {
     array.splice(-1)
-  } while (array.length > 0);
+  } while (array.length > 0 && maybeTrue())
 }
-
-var riverdaleMainCharacters = ["Jughead", "Betty", "Veronica", "Archie", "Cheryl"]
