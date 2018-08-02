@@ -20,10 +20,10 @@ In programming terms, we can think of the gifts as an array and the act of
 wrapping them as a function. We could, of course, write the following code:
 
 ```javascript
-var gifts = ["teddy bear", "drone", "doll"];
+var gifts = ['teddy bear', 'drone', 'doll'];
 
 function wrapGift(gift) {
-  console.log(`Wrapped ${gift} and added a bow!`);
+	console.log(`Wrapped ${gift} and added a bow!`);
 }
 ```
 
@@ -59,7 +59,7 @@ made up of four statements and has the following structure:
 
 ```javascript
 for ([initialization]; [condition]; [iteration]) {
-  [loopBody];
+	[loopBody];
 }
 ```
 
@@ -88,7 +88,7 @@ The code below will print the string "Hello World!" 99 times
 // - which is print "Hello World"; increment i each time the code in loopBody is executed
 
 for (var i = 1; i < 100; i++) {
-  console.log("Hello World the " + i + " time");
+	console.log('Hello World the ' + i + ' time');
 }
 
 // The above prints:
@@ -109,7 +109,7 @@ _interpolate_ `i`?) Then return the array.
 
 ```javascript
 for (let i = 0; i < 25; i++) {
-  // ...
+	// ...
 }
 ```
 
@@ -123,7 +123,7 @@ structure:
 
 ```javascript
 while ([condition]) {
-  [loopBody];
+	[loopBody];
 }
 ```
 
@@ -133,13 +133,13 @@ while ([condition]) {
 
 ```javascript
 function maybeTrue() {
-  return Math.random() >= 0.5; // Returns a random number between 0 (inclusive) and 1 (exclusive)
+	return Math.random() >= 0.5; // Returns a random number between 0 (inclusive) and 1 (exclusive)
 }
 
 // run until `maybeTrue()` returns `false`
 // (so the body of the loop might _never_ run!)
 while (maybeTrue()) {
-  console.log("And I ran; I ran so far away!");
+	console.log('And I ran; I ran so far away!');
 }
 ```
 
@@ -156,7 +156,7 @@ remember to change the condition on each pass so that the loop terminates
 let countdown = 100;
 
 while (countdown > 0) {
-  console.log(--countdown);
+	console.log(--countdown);
 }
 ```
 
@@ -174,7 +174,7 @@ tested. Has the following structure:
 
 ```javascript
 do {
-  [loopBody];
+	[loopBody];
 } while ([condition]);
 ```
 
@@ -188,12 +188,12 @@ below:
 var i = 0;
 
 function incrementVariable() {
-  i = i + 1;
+	i = i + 1;
 }
 
 do {
-  console.log("doo-bee-doo-bee-doo");
-  incrementVariable();
+	console.log('doo-bee-doo-bee-doo');
+	incrementVariable();
 } while (i < 5);
 ```
 
