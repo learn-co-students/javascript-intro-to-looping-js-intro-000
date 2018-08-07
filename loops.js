@@ -20,13 +20,17 @@ function whileLoop(n) {
 }
 
 function doWhileLoop(array) {
-  function maybeTrue() {
-    return Math.random() >= 0.5
+  var i = 0;
+
+  function incrementVariable() {
+    i = i + 1;
   }
 
   do {
+    console.log( "array.length = " + array.length + " and i = "+i)
     array = array.slice(1)
-  } while (array.length > 0 && maybeTrue())
+    incrementVariable();
+  } while (array.length > 0 && i < 5)
 
   return array
 }

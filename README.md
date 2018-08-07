@@ -152,18 +152,21 @@ You will rarely see `do-while` used since very few situations require a loop tha
 #### Example
 
 ```javascript
-function maybeTrue() {
-  return Math.random() >= 0.5
+var i = 0;
+
+function incrementVariable() {
+  i = i + 1;
 }
 
 do {
   console.log('doo-bee-doo-bee-doo')
-} while (maybeTrue());
+  incrementVariable();
+} while (i < 5);
 ```
 
 Remember how we couldn't be sure with the plain `while` loop above that the body would run using `maybeTrue()`? With `do`, we _can_ be sure that the body will run!
 
-**TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take an array as an argument. Use the `maybeTrue()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `maybeTrue()` returns `false`. (Your condition might look something like `array.length > 0 && maybeTrue()`.) Finally, return the array.
+**TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take an array as an argument. Use the `incrementVariable()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `incrementVariable()` returns `false`. (Your condition might look something like `array.length > 0 && incrementVariable()`.) Finally, return the array.
 
 ## Conclusion
 
