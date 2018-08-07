@@ -12,7 +12,7 @@ const expect = chai.expect
 
 function makeArray() {
   const array = []
-  const t = Math.floor(Math.random() * 10)
+  const t = 10
 
   for (let i = 0; i < t; i++) {
     array.push("I am a strange loop.")
@@ -30,15 +30,14 @@ describe('loops', () => {
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
       const [array, t] = makeArray()
       const strangeArray = forLoop(array)
-
-      expect(strangeArray.length).to.equal(t + 25)
-
       const testArray = strangeArray.slice(array.length)
 
-      for (let i = 0, l = testArray.length; i < l; i++) {
-        let s = i === 1 ? "I am 1 strange loop." : `I am ${i} strange loops.`
-        expect(testArray[i]).to.equal(s)
-      }
+      let first = "I am 1 strange loop."
+      let rest = "I am 24 strange loops."
+        
+      expect(strangeArray[11]).to.equal(first)
+      expect(strangeArray[34]).to.equal(rest)
+      expect(strangeArray.length).to.equal(t + 25)
     })
   })
 
@@ -55,7 +54,7 @@ describe('loops', () => {
   })
 
   describe('doWhileLoop(array)', () => {
-    it('removes elements from `array` until `array` is empty or until `maybeTrue()` returns `false`', () => {
+    it('removes elements from `array` until `array` is empty or until `incrementVariable()` returns `false`', () => {
       const [array, t] = makeArray()
       const l = array.length
 
