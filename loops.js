@@ -16,3 +16,17 @@ function whileLoop(n) {
   }
     return "done"
 }
+function doWhileLoop(array) {
+  var i = 0;
+    function incrementVariable() {
+      i = i + 0;
+    }
+      return array
+
+  }
+     do {
+       earn
+
+     }
+
+}
