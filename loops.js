@@ -9,7 +9,7 @@ for (var i = 0; i < 25; i++) {
   return array
 }
 
-var n = 10
+var n = 9
 
 function whileLoop(n) {
   while (n > 0) {
