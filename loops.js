@@ -1,34 +1,32 @@
-function forLoop(array) {
+function forLoop(arr) {
   for (let i = 0; i < 25; i++) {
     if (i === 1) {
-      array.push(`I am ${i} strange loop.`);
-    }
-    else {
-      array.push(`I am ${i} strange loops.`);
+      arr.push(`I am ${i} strange loop.`);
+    } else {
+      arr.push(`I am ${i} strange loops.`);
     }
   }
-  return array;
+  return arr;
 }
 
-function whileLoop(number) {
-  while (number > 0) {
-    console.log(number--);
+function whileLoop(n) {
+  let countdown = n;
+  
+  while (countdown > 0) {
+    console.log(countdown);
+    countdown--;
   }
-  return "done";
+  return 'done';
 }
 
-
-//I do not understand the do while test at all and cheated and looked at the solution and still don't understand it
-function doWhileLoop(array) {
-  var i = 0;
- 
-  function incrementVariable() {
+function incrementVariable() {
+  let i = 0;
   i = i + 1;
 }
+
+function doWhileLoop(arr) {
   do {
-    console.log('array.length = ' + array.length + ' and i = ' + i);
-		array = array.slice(1);
-		incrementVariable();
-	} while (array.length > 0 && i < 5);
-  return array;
+    arr.pop(); 
+  } while (arr.length > 0 && incrementVariable());
+  return arr;
 }
