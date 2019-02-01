@@ -189,12 +189,12 @@ var i = 0;
 
 function incrementVariable() {
   i = i + 1;
+  return i;
 }
 
 do {
   console.log("doo-bee-doo-bee-doo");
-  incrementVariable();
-} while (i < 5);
+} while (incrementVariable() < 5);
 ```
 
 Remember how we couldn't be sure with the plain `while` loop above that the body
@@ -202,11 +202,9 @@ would run using `maybeTrue()`? With `do`, we _can_ be sure that the body will
 run!
 
 **TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take
-an array as an argument. Use the `incrementVariable()` function (you can copy it
-from this README) as the condition, and remove elements from the array until the
-array is empty or until `incrementVariable()` returns `false`. (Your condition
-might look something like `array.length > 0 && incrementVariable()`.) Finally,
-return the array.
+an integer as an argument. Use the `incrementVariable()` function (you can copy it
+from this README) in the condition, and console log `"I run once regardless."` while `incrementVariable()` returns a number less than the parameter received. (Your condition
+might look something like `incrementVariable() < num`.) Remember that it should also console log when receiving 0 as a parameter because the do-while runs before the condition is checked.
 
 ## Conclusion
 
