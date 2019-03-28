@@ -1,0 +1,3 @@
+function forLoop(){
+  var array = 
+}
