@@ -1,30 +1,30 @@
 function forLoop(array) {
-  for (let i = 0; i < 25; i++) {
+  for(let i = 0; i<25; i++) {
     if (i === 1) {
-      array.push(`I am 1 strange loop.`);
+      array.push("I am 1 strange loop.")
     } else {
-    array.push(`I am ${i} strange loops.`);
+      array.push(`I am ${i} strange loops.`)
     }
   }
-  return array;
+  return array
 }
 
-function whileLoop(number) {
-  let countdown = number;
+function whileLoop(num) {
+  let countdown = num;
   while (countdown > 0) {
-    console.log(--countdown);
+    console.log(--countdown)
   }
-  return "done";
+  return "done"
 }
 
 function doWhileLoop(num) {
+  var i = 0;
   function incrementVariable() {
-    num = num - 1;
-    return num;
+    i = i + 1;
+    return i;
   }
 
-  do {
-    console.log("I run regardless");
-  } while (incrementVariable() < num);
-  }
+do {
+  console.log("I run once regardless.")
+} while (incrementVariable() < num)
 }
