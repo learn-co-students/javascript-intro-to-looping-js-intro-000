@@ -12,7 +12,7 @@ const expect = chai.expect
 
 function makeArray() {
   const array = []
-  const t = Math.floor(Math.random() * 10)
+  const t = 10
 
   for (let i = 0; i < t; i++) {
     array.push("I am a strange loop.")
@@ -30,15 +30,14 @@ describe('loops', () => {
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
       const [array, t] = makeArray()
       const strangeArray = forLoop(array)
-
-      expect(strangeArray.length).to.equal(t + 25)
-
       const testArray = strangeArray.slice(array.length)
 
-      for (let i = 0, l = testArray.length; i < l; i++) {
-        let s = i === 1 ? "I am 1 strange loop." : `I am ${i} strange loops.`
-        expect(testArray[i]).to.equal(s)
-      }
+      let first = "I am 1 strange loop."
+      let rest = "I am 24 strange loops."
+
+      expect(strangeArray[11]).to.equal(first)
+      expect(strangeArray[34]).to.equal(rest)
+      expect(strangeArray.length).to.equal(t + 25)
     })
   })
 
@@ -54,14 +53,17 @@ describe('loops', () => {
     })
   })
 
-  describe('doWhileLoop(array)', () => {
-    it('removes elements from `array` until `array` is empty or until `maybeTrue()` returns `false`', () => {
-      const [array, t] = makeArray()
-      const l = array.length
+  describe('doWhileLoop(num)', () => {
+    it ('console logs "I run once regardless." 1 time when passed an integer of 0 as a parameter.', () => {
+        const spy = chai.spy.on(console, 'log');
+        doWhileLoop(0);
+        expect(spy).to.have.been.called.exactly(1);
+    })
 
-      const newArray = doWhileLoop(array)
-
-      expect(newArray).to.have.length.of.at.most(l - 1)
+    it ('console logs "I run once regardless." 10 times when passed an integer of 10 as a parameter.', () => {
+      const spy = chai.spy.on(console, 'log');
+      doWhileLoop(10);
+      expect(spy).to.have.been.called.exactly(10);
     })
   })
 })
