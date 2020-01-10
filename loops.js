@@ -1,10 +1,10 @@
 function forLoop(array) {
   for(let i = 0; i < 25; i++) {
     if (i == 1) {
-      array[i] = "I am 1 strange loop."
+      array.push("I am 1 strange loop.")
     }
-    else  {
-      array[i] = "I am ${i} strange loops."
+    else {
+      array.push(`I am ${i} strange loop${i === 0 ? '' : 's'}.`)
     }
   }
 
@@ -21,8 +21,10 @@ function whileLoop(digit) {
 function doWhileLoop(ig) {
   do {
     console.log("I run once regardless.")
-  } while (incrementVariable() < ig)
+  } while (incrementVariable() <= ig)
 }
+
+var i = 0;
 
 function incrementVariable() {
   i = i + 1;
