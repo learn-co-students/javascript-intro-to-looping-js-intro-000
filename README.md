@@ -41,7 +41,7 @@ make this code a bit more abstract and replace the numbers with a variable,
 incrementing the variable after each log:
 
 ```js
-var num = 1
+let num = 1
 console.log(num)
 num += 1
 console.log(num)
@@ -88,7 +88,7 @@ In programming terms, we can think of the gifts as an array and the act of
 wrapping them as a function. We could, of course, write the following code:
 
 ```javascript
-var gifts = ["teddy bear", "drone", "doll"];
+let gifts = ["teddy bear", "drone", "doll"];
 
 function wrapGift(gift) {
   console.log(`Wrapped ${gift} and added a bow!`);
@@ -130,7 +130,7 @@ for ([initialization]; [condition]; [iteration]) {
 - initialization
   - An expression (including assignment expressions) or variable declaration.
     Typically used to initialize a counter variable. This expression may optionally
-    declare new variables with the var keyword
+    declare new variables with the let keyword
 - Condition
   - An expression evaluated before each loop iteration. If this expression evaluates
     to true, statement is executed
@@ -149,7 +149,7 @@ Going back to the original counting example, we could use a `for` loop to count
 numbers:
 
 ```js
-for (var num = 1; num < 6; num += 1) {
+for (let num = 1; num < 6; num += 1) {
   console.log(num)
 }
 ```
@@ -165,7 +165,7 @@ The above loop will produce:
 ```
 
 The same results as our initial code! In this loop design, we declare a
-variable, `var num = 1`, as the initialization. Then, we establish the
+variable, `let num = 1`, as the initialization. Then, we establish the
 condition, that `num` is _less than_ 6. The third thing we do is define the
 iteration - `num += 1`. Combined, these three statements indicate that, starting
 at `num = 1`, this loop will execute over and over until the condition is no
@@ -183,7 +183,7 @@ the string "Hello World!" 99 times:
 // as long as i is less than 100 execute the code in the loopBody
 // - which is print "Hello World"; increment i each time the code in loopBody is executed
 
-for (var i = 1; i < 100; i++) {
+for (let i = 1; i < 100; i++) {
   console.log("Hello World the " + i + " time");
 }
 
@@ -199,16 +199,16 @@ literals.
 Now, let's revisit our gift wrapping example. Given the following array:
 
 ```js
-var gifts = ["teddy bear", "drone", "doll"];
+let gifts = ["teddy bear", "drone", "doll"];
 ```
 
 If we wanted to write a function that logged a message for each gift in the
 array, we would need to access each element one after the other. Sounds loopy!
 
 ```js
-var gifts = ["teddy bear", "drone", "doll"];
+let gifts = ["teddy bear", "drone", "doll"];
 
-for (var i = 0; i < 3; i++) {
+for (let i = 0; i < 3; i++) {
   console.log(`Wrapped ${gifts[i]} and added a bow!`);
 }
 ```
@@ -228,9 +228,9 @@ we _change_ the condition to be based off the length of our array, we'll be in
 great shape:
 
 ```js
-var gifts = ["teddy bear", "drone", "doll", "bike"];
+let gifts = ["teddy bear", "drone", "doll", "bike"];
 
-for (var i = 0; i < gifts.length; i++) {
+for (let i = 0; i < gifts.length; i++) {
   console.log(`Wrapped ${gifts[i]} and added a bow!`);
 }
 ```
@@ -241,10 +241,10 @@ every element.
 To finally wrap up, we can wrap the loop in a function:
 
 ```js
-var gifts = ["teddy bear", "drone", "doll"];
+let gifts = ["teddy bear", "drone", "doll"];
 
 function wrapGift(gifts) {
-  for (var i = 0; i < gifts.length; i++) {
+  for (let i = 0; i < gifts.length; i++) {
     console.log(`Wrapped ${gifts[i]} and added a bow!`);
   }
 }
@@ -295,7 +295,7 @@ while ([condition]) {
 Here is our counting example as a `while` loop:
 
 ```js
-var num = 1
+let num = 1
 
 while (num < 6) {
   console.log(num)
@@ -370,7 +370,7 @@ below:
 #### Example
 
 ```javascript
-var i = 0;
+let i = 0;
 
 function incrementVariable() {
   i = i + 1;
