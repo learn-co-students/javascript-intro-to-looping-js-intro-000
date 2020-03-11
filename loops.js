@@ -25,19 +25,17 @@ function whileLoop(number)
   }
   return "done";
 }
-function doWhileLoop(num)
-{
-  if(num>9) {
-      num = 9;
-   }
-  var i=0;
-  function incrementVariable() {
-    i++;
+
+
+function doWhileLoop(num) {
+	var i = 0;
+
+	function incrementVariable() {
+		i = i + 1;
     return i;
-  }
+	}
 
   do {
-    console.log(i, "I run once regardless.");
-  }
-  while (incrementVariable()<= num);
+    console.log("I run once regardless.");
+  } while (incrementVariable() < num);
 }
