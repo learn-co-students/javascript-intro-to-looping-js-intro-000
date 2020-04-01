@@ -9,10 +9,9 @@ return array}
 
 
 function whileLoop(n){
-  let count = n;
-
+  let count = n
   while (n > 0) {
-    console.log(--count)
+    console.log(n)
   }
   return 'done';
 }
