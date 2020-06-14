@@ -12,15 +12,18 @@ function whileLoop(n) {
   return 'done'
 }
 
-let i = 0
+
 
 function doWhileLoop(n) {
+
+  let i = 0
+
+  function incrementVariable() {
+    i+=1
+    return i
+  }
+
   do {
     console.log("I am run once regardless")
-  } while (incrementVariable() <= n)
-}
-
-function incrementVariable() {
-  i+=1
-  return i
+  } while (incrementVariable() < n)
 }
