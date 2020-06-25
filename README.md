@@ -312,7 +312,7 @@ One common mistake when writing `while` loops - we must always remember to
 include the iteration statement (`num += 1`). Otherwise, the loop will run
 forever!
 
-Here is another example, this time, counting down: 
+Here is another example, this time, counting down:
 
 ```js
 let countdown = 100;
@@ -351,7 +351,7 @@ should take a number as an argument. Using a `while` loop, count down (using
 
 The `do-while` loop is almost exactly the same as the while loop, except for the
 fact that the loop's body is executed at least once before the condition is
-tested. 
+tested.
 
 #### Syntax
 
