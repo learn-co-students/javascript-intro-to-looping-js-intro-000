@@ -15,7 +15,6 @@ var whileLoop = (n) => {
 }
 
 let i = 0
-
 var doWhileLoop = (num) => {
     function increment() {
         return i++
