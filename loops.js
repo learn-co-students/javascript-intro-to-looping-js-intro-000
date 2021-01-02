@@ -14,7 +14,14 @@ var whileLoop = (n) => {
     return "done"
 }
 
+let i = 0
 
 var doWhileLoop = (num) => {
+    function increment() {
+        return i++
+    }
 
+    do {
+        console.log("I run once regardless.");
+    } while (increment() < num)
 }
